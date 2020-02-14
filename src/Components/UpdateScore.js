@@ -45,7 +45,7 @@ export default function UpdateScore() {
           variant="contained"
           color="primary"
           onClick={() => {
-            window.location.pathname = "/manage";
+            window.location.pathname = process.env.PUBLIC_URL + "/manage";
           }}
         >
           {`<< groups`}
