@@ -15,7 +15,7 @@ function App() {
         <Route path="/score">
           <UpdateScore />
         </Route>
-        <Route path="/leaderboard">
+        <Route path="/" exact>
           <LeaderBoard />
         </Route>
       </Router>

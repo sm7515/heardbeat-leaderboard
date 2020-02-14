@@ -156,7 +156,7 @@ export default function Manage() {
             </div>
           )}
           <ImageUploader
-            withIcon={true}
+            // withIcon={true}
             buttonText="Change profile picture"
             onChange={onDrop}
             imgExtension={[".jpg", ".jpeg", ".png", ".gif"]}
