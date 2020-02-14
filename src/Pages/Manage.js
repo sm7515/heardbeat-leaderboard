@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Button
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import EdiText from "react-editext";
 import axios from "axios";
@@ -7,7 +13,7 @@ import ImageUploader from "react-images-upload";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(2),
     minWidth: 240
   },
   selectEmpty: {
@@ -29,7 +35,7 @@ export default function Manage() {
     axios
       .get(`https://heartbeat-api.herokuapp.com/group/getGroups`)
       .then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         setGroups(res.data);
       })
       .catch(err => {
@@ -38,12 +44,12 @@ export default function Manage() {
   }, [number, name]);
 
   useEffect(() => {
-    console.log(number);
+    // console.log(number);
     number &&
       axios
         .get(`https://heartbeat-api.herokuapp.com/group/getGroup?No=${number}`)
         .then(res => {
-          console.log(res.data);
+          // console.log(res.data);
           setName(res.data.groupName);
           setProfileImg(res.data.profileImg);
         })
@@ -67,7 +73,7 @@ export default function Manage() {
   }, [profileimg]);
 
   const handleSave = val => {
-    console.log("Edited Value -> ", val);
+    // console.log("Edited Value -> ", val);
     name = val;
     setName(name);
     axios
@@ -76,15 +82,15 @@ export default function Manage() {
         number
       })
       .then(res => {
-        console.log(res.data, "new name", name);
+        // console.log(res.data, "new name", name);
       })
       .catch(err => {
         console.log(err);
       });
   };
 
-  async function onDrop(picture) {
-    console.log(picture);
+  function onDrop(picture) {
+    // console.log(picture);
     if (picture.length !== 0) {
       const picFile = picture[0];
       const reader = new FileReader();
@@ -93,10 +99,6 @@ export default function Manage() {
         profileimg = reader.result;
         setProfileImg(profileimg);
       };
-      const refresh = await function() {
-        window.location.reload();
-      };
-      refresh();
     }
   }
 
@@ -108,7 +110,7 @@ export default function Manage() {
           number
         })
         .then(res => {
-          console.log(res.data);
+          // window.location.reload();
         })
         .catch(err => {
           console.log(err);
@@ -165,6 +167,17 @@ export default function Manage() {
           />
         </div>
       )}
+      {
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => {
+            window.location.reload();
+          }}
+        >
+          {`refresh the page`}
+        </Button>
+      }
     </div>
   );
 }

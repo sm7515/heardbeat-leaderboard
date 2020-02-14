@@ -41,15 +41,15 @@ export default function UpdateScore() {
   return (
     <div className="wrapper">
       {
-        // <Button
-        //       variant="contained"
-        //       color="primary"
-        //       onClick={() => {
-        //         // window.location.pathname = "/manage";
-        //       }}
-        //     >
-        //       {`<< groups`}
-        //     </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => {
+            window.location.pathname = "/manage";
+          }}
+        >
+          {`<< groups`}
+        </Button>
       }
       <span className="group">
         {groups &&

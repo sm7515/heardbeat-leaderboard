@@ -11,10 +11,12 @@ export default function LeaderBoard() {
   const [theRest, setRest] = useState([]);
 
   function getAllGroups() {
-    axios.get(`http://localhost:5000/group/getByRank`).then(res => {
-      console.log(res.data);
-      setGroups(res.data);
-    });
+    axios
+      .get(`https://heartbeat-api.herokuapp.com/group/getByRank`)
+      .then(res => {
+        console.log(res.data);
+        setGroups(res.data);
+      });
   }
 
   useEffect(() => {
