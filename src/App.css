@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.groupcontainer {
+  font-size: 16px;
+  padding: 20px 0 20px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+#update {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px 0 10px 0;
+}
+
+#groupname {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#profileimg {
+  margin-top: 20px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.group-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.leaderboard-container {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: rgb(239, 130, 171);
+  background: linear-gradient(
+    180deg,
+    rgba(239, 130, 171, 1) 0%,
+    rgba(251, 173, 186, 1) 28%,
+    rgba(246, 197, 219, 1) 62%,
+    rgba(247, 231, 232, 1) 100%
+  );
+  font-family: "ZCOOL KuaiLe", cursive;
+  flex-shrink: 1;
+}
+
+.top-container,
+.rest-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  flex-shrink: 1;
+}
+
+.top-item,
+.rest-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-shrink: 1;
+  /* justify-content: space-between; */
+  border-radius: 40px;
+  /* background: pink; */
+  padding: 5px 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.rank {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #c24448;
+  background: #fff;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.rest .rank {
+  color: grey;
+}
+
+.name,
+.score {
+  color: white;
+  font-weight: bold;
+}
+
+.top-container .image {
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  flex-shrink: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5c1cd;
+}
+
+.image {
+  margin-right: 10px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 1;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.topfive {
+  background-color: #fbadba;
+}
+
+.fiveToTen {
+  background-color: #fccbc5;
+}
+.tenToTwen {
+  background-color: #f8ced1;
+}
+.rest {
+  background-color: #f7e7e8;
+  color: grey;
+}
+.rest .name,
+.rest .score {
+  color: grey;
+}
+
+.score {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 40px;
+  flex-shrink: 1;
+}
+
+.score::before {
+  content: url("https://img.icons8.com/ios-filled/36/ffffff/pulse.png");
+  margin-right: 5px;
+}
+
+.rest .score::before {
+  content: url("https://img.icons8.com/ios-filled/36/A9A9A9/pulse.png");
+  margin-right: 5px;
+}
+
+.score img {
+  margin-left: 5px;
+}
+.top-container .score img {
+  animation: action 0.5s infinite alternate;
+}
+
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
