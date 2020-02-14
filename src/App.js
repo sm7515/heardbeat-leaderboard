@@ -8,7 +8,7 @@ import LeaderBoard from "./Pages/LearderBoard";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Route path="/manage">
           <Manage />
         </Route>
