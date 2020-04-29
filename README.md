@@ -10,7 +10,7 @@
   * backend: express
   * database: firebase
   * deployed backend api via heroku
-  * https://www.cssanyu.org/2020/heartbeat-leaderboard/
+  * view website: https://www.cssanyu.org/2020/heartbeat-leaderboard/
 
 ### Demo
-  [demo](demo.gif)
+  ![demo](demo.gif)
