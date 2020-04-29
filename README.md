@@ -11,7 +11,7 @@
   
 ### Tools
   * frontend: create-react-app and material-ui
-  * backend: express (backend repo)[https://github.com/sm7515/heartbeat-api]
+  * backend: express [backend repo](https://github.com/sm7515/heartbeat-api)
   * database: firebase
   * deployed backend api via heroku
 
